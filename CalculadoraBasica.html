@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+</head>
+<body>
+    <h1>Calculadora</h1>
+
+    <input type="text" id="n1" placeholder="Número 1">
+
+    <select id="operador">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+    </select>
+
+    <input type="text" id="n2"placeholder="Número 2">
+
+    <button onclick="calcular()" >Calcular</button>
+
+    <p id="resultado"></p>
+
+    <script>
+        function calcular(){
+            let numero1 = Number (document.getElementById("n1").value)
+            let numero2 = Number (document.getElementById("n2").value)
+
+            let operador = document.getElementById("operador").value
+
+            let resultado
+
+            if(operador ==  "+"){
+                resultado = numero1 + numero2
+            }
+            if(operador ==  "-"){
+                resultado = numero1 - numero2
+            }
+            if(operador ==  "*"){
+                resultado = numero1 * numero2
+            }
+            if(operador ==  "/"){
+                resultado = numero1 / numero2
+            }
+
+            document.getElementById("resultado").innerHTML = "resultado: " + resultado
+
+        }
+    </script>
+</body>
+</html>
